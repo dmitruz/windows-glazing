@@ -43,3 +43,16 @@ const modals = () => {
             }
         });
     }
+      function showModalByTime(selector, time) {
+        setTimeout(function() {
+            document.querySelector(selector).style.display = 'block';
+            document.body.style.overflow = "hidden";
+        }, time);
+    }
+
+   bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
+   bindModal('.phone_link', '.popup', '.popup .popup_close');
+    // showModalByTime('.popup', 60000);
+};
+
+export default modals;
